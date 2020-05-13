@@ -1,6 +1,6 @@
 ## Help Desk Entities
 
-##### Back to the [Help Desk Tutorial](/readme.md), or on to the next step [Create Help Desk Solution](/CreateHelpDeskSolution.md)
+##### Back to the [Help Desk Tutorial](README.md), or on to the next step [Create Help Desk Solution](CreateHelpDeskSolution.md)
 
 \* denotes required fields.
 
@@ -44,4 +44,4 @@
 | * | Description   | guid                     |      |      | Cannot connect to my Acme device.|
 |   | IssueId       | guid                     |      |      | Navigation Property              |
 
-##### Back to the [Help Desk Tutorial](/readme.md), or on to the next step [Creating Help Desk Solution](/CreatingHelpDeskSolution.md)
+##### Back to the [Help Desk Tutorial](/README.md), or on to the next step [Creating Help Desk Solution](CreatingHelpDeskSolution.md)
