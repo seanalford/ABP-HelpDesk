@@ -7,9 +7,7 @@
 - [Part-3: - Create the Help Desk Entities](Part3-MVC-CreateHelpDeskEntities.md)
 - [Part-4: - Customize the Help Desk](Part4-MVC-CustomizeHelpDesk.md)
 
-##### Back to the [Help Desk Entities](HelpDeskEntities.md), or on to the next step [Creating the Help Desk Entities](CreateHelpDeskEntities.md)
-
-### Start ABP Suite
+## Start ABP Suite
 
 1. Open Administrator: Command Prompt
 2. Login to ABP ```abp login user -p password```
@@ -17,7 +15,7 @@
 
 Your browser should automatically open to ```http://localhost:3000/```
 
-### Create Help Desk Solution
+## Create the Help Desk Solution
 
 **NOTE**: For additional information please see: [Creating a new ABP solution](https://docs.abp.io/en/commercial/latest/abp-suite/create-solution)
 
@@ -30,11 +28,26 @@ Your browser should automatically open to ```http://localhost:3000/```
 
 ![Create a new solution](CreateHelpDeskSolution.jpg)
 
-### Help Desk Solution Created
+7. If all goes as expectd you should receive the "Solution created!" message.
 
-If all goes will you should receive 
+## Deploy the initial HelpDesk database migration
 
-![HelpDeskSolutionCreated](HelpDeskSolutionCreated.jpg)
+Now that the NuGet packages have been updated, and the project builds sussfully its time to deploy the database initial migration.
+
+1. Set the HelpDesk.DbMigrator project as the startup project by right clicking on the HelpDesk.DbMigrator project and clicking ```Set as Startup Project``` 
+2. Next Run the project ```Press F5``` and wait for it to complete the databasea migration deployment.
+3. Finally, Press any key to close the Console windows when prompted.
+
+## Start the HelpDesk.Web
+
+Now that the Help Desk database has been deployed, the next step is to start the Help Desk.
+
+1. Set the HelpDesk.Web as the startup project by right clicking on the HelpDesk.Web project and clicking ```Set as Startup Project``` 
+2. Next Run the project ```Press F5``` and wait for the Help Desk to start.
+3. Finally, log into the Help Desk using the default username ```admin``` and password ```1q2w3E*```.
+
+![HelpDeskLoging](HelpDeskLogin.jpg)
 
 
-##### Back to the [Help Desk Entities](HelpDeskEntities.md), or on to the next step [Creating the Help Desk Entities](CreateHelpDeskEntities.md)
+
+
