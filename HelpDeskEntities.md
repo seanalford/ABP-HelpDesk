@@ -30,8 +30,8 @@
 | * | Tags          | string                   |      | 500  | Acme Product, V5.8, Connection   |
 |   | Solution      | string                   |      | 2000 | Turned device on connect OK      |
 
-- Would be nice if you could select multipl tags from a list.
-- Maybe add a steps to reproduce property.
+- Would be nice if you could select multiple tags from a list.
+- Maybe add steps to reproduce property.
 - Maybe add a trouble shooting checklist.
 
 ##### Ticket : FullAuditedAggregateRoot
