@@ -1,0 +1,14 @@
+{
+  "culture": "tr",
+  "texts": {
+    "Menu:Home": "Ana sayfa",
+    "Home": "Ana sayfa",
+    "Welcome": "Hoşgeldiniz",
+    "LongWelcomeMessage": "Uygulamaya hoşgeldiniz. Bu, ABP framework'ü üzerine bina edilmiş bir başlangıç projesidir. Daha fazla bilgi için abp.io adresini ziyaret edebilirsiniz.",
+    "EndDate": "Bitiş tarihi",
+    "StartDate": "Başlangıç tarihi",
+    "Permission:Dashboard": "Genel görünüm",
+    "Menu:Dashboard": "Genel görünüm",
+    "Dashboard": "Genel görünüm"
+  }
+}

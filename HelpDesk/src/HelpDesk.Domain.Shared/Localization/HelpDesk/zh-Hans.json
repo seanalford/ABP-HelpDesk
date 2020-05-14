@@ -1,0 +1,25 @@
+{
+    "culture": "zh-Hans",
+    "texts": {
+      "Menu:Home": "首页",
+      "Welcome": "欢迎",
+      "LongWelcomeMessage": "欢迎来到该应用程序. 这是一个基于ABP框架的启动项目. 有关更多信息, 请访问 abp.io.",
+      "EndDate": "结束日期",
+      "StartDate": "开始日期",
+      "Permission:Dashboard": "仪表板",
+      "Menu:Dashboard": "仪表板",
+      "Permission:Reservations": "Reservations",
+      "Permission:Create": "创建",
+      "Permission:Edit": "编辑",
+      "Permission:Delete": "删除",
+      "Reservations": "Reservations",
+      "NewReservation": "New Reservation",
+      "Actions": "操作",
+      "SuccessfullyDeleted": "删成功除",
+      "DeleteConfirmationMessage": "您确定要删除此记录吗?",
+      "Search": "搜索",
+      "CheckinDate": "登记日期",
+      "PersonCount": "人数",
+      "IsPaid": "已经付清"
+    }
+  }

@@ -1,0 +1,36 @@
+﻿@page "/Dashboard"
+@using System.Globalization
+@using Microsoft.AspNetCore.Mvc.Localization
+@using Microsoft.AspNetCore.Mvc.Rendering
+@using HelpDesk.Localization
+@using HelpDesk.Web.Menus
+@using Volo.Abp.AspNetCore.Mvc.UI.Layout
+@using Volo.Abp.AspNetCore.Mvc.UI.Widgets
+@using Volo.Abp.AuditLogging.Web.Pages.Shared.Components.AverageExecutionDurationPerDayWidget
+@using Volo.Abp.AuditLogging.Web.Pages.Shared.Components.ErrorRateWidget
+@inject IHtmlLocalizer<HelpDeskResource> L
+@inject IWidgetManager WidgetManager
+@model HelpDesk.Web.Pages.TenantDashboardModel
+@{
+    ViewBag.PageTitle = "Dashboard";
+}
+@inject IPageLayout PageLayout
+@{
+    PageLayout.Content.Title = L["Dashboard"].Value;
+    PageLayout.Content.BreadCrumb.Add(L["Menu:Dashboard"].Value);
+    PageLayout.Content.MenuItemName = HelpDeskMenus.TenantDashboard;
+}
+
+@section scripts {
+    <abp-script src="/Pages/TenantDashboard.js" />
+}
+
+@section styles {
+    <abp-style src="/Pages/TenantDashboard.css" />
+}
+
+<abp-card>
+    <abp-card-body>
+        Add your Tenant related charts/widgets to this page !
+    </abp-card-body>
+</abp-card>
