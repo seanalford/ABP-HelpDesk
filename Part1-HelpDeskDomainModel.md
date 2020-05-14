@@ -37,6 +37,11 @@
 |---|------------------|-----------------------------|-----:|-----:|----------------------------------|
 | * | Organizations    | ICollection\<Organization>  |      |      |                                  |
 
+##### Tag : FullAuditedAggregateRoot\<Guid>
+|   | Property         | Type                        | Min  | Max  | Examples                         |
+|---|------------------|-----------------------------|-----:|-----:|----------------------------------|
+| * | Text             | string                      |      | 50   |                                  |
+
 ##### Ticket : FullAuditedAggregateRoot\<Guid>
 |   | Property         | Type                        | Min  | Max  | Examples                         |
 |---|------------------|-----------------------------|-----:|-----:|----------------------------------|
@@ -47,7 +52,6 @@
 | * | Status           | enum                        |      |      | Open                             |
 | * | Title            | string                      |      | 250  |                                  |
 | * | Text             | string                      |      | 1024 |                                  |
-| * | Tags             | string                      |      | 500  |                                  |
 | * | Tags             | ICollection\<Tag>           |      |      |                                  |
 |   | CloserDate       | DateTine?                   |      |      |                                  |
 |   | CloserUserId     | Guid?                       |      |      | Navigation Property              |
