@@ -9,7 +9,7 @@
 
 ## Domain Model
 
-![HelpDeskDomainModel](HelpDeskDomainModel.PNG)
+![HelpDeskDomainModel](HelpDeskDomainModel.png)
 
 [HelpDeskDomainModel.drawio](HelpDeskDomainModel.drawio) open with [draw.io](https://app.diagrams.net)
 
