@@ -81,5 +81,3 @@
 | * | CreatorUserId    | Guid                        |      |      | Navigation Property              |
 | * | Text             | string                      |      |      | Navigation Property              |
 | * | Votes            | int                         |      |      |                                  |
-
-##### Back to the [Help Desk Tutorial](/README.md), or on to the next step [Creating Help Desk Solution](CreatingHelpDeskSolution.md)
