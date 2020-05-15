@@ -1,0 +1,22 @@
+﻿@page
+@inherits Acme.HelpDesk.Web.Pages.HelpDeskPage
+@using Acme.HelpDesk.Web.Menus
+@using Volo.Abp.AspNetCore.Mvc.UI.Layout
+@model Acme.HelpDesk.Web.Pages.IndexModel
+@{
+    ViewBag.PageTitle = "Home";
+}
+@inject IPageLayout PageLayout
+@{
+    PageLayout.Content.Title = L["Home"].Value;
+    PageLayout.Content.BreadCrumb.Add(L["Menu:Home"].Value);
+    PageLayout.Content.MenuItemName = HelpDeskMenus.Home;
+}
+<abp-card>
+    <abp-card-header>@L["Welcome"]</abp-card-header>
+    <abp-card-body>
+        <p>@L["LongWelcomeMessage"]</p>
+        <hr />
+        <p class="text-right"><a href="https://abp.io?ref=tmpl" target="_blank">abp.io</a></p>
+    </abp-card-body>
+</abp-card>

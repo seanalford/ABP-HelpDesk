@@ -1,23 +1,23 @@
-# [ABP Suite](https://commercial.abp.io/tools/suite) - Help Desk Tutorial - Part 1
+# Acme Help Desk Tutorial - Part 1
 
-## About this tutorial:
+### About this tutorial:
 
-- Part-1: - Help Desk Domain Model
-- [Part-2: - Create the Help Desk Solution](Part2-MVC-CreateHelpDeskSoluton.md)
-- [Part-3: - Create the Help Desk Entities](Part3-MVC-CreateHelpDeskEntities.md)
-- [Part-4: - Customize the Help Desk](Part4-MVC-CustomizeHelpDesk.md)
+- Part-1: - Acme Help Desk Domain Model
+- [Part-2: - Create the Acme Help Desk Solution](Part2-MVC-CreateHelpDeskSoluton.md)
+- [Part-3: - Create the Acme Help Desk Entities](Part3-MVC-CreateHelpDeskEntities.md)
+- [Part-4: - Customize the Acme Help Desk](Part4-MVC-CustomizeHelpDesk.md)
 
-## Domain Model
+### Domain Model
 
 ![HelpDeskDomainModel](HelpDeskDomainModel.png)
 
 [HelpDeskDomainModel.drawio](HelpDeskDomainModel.drawio) open with [draw.io](https://app.diagrams.net)
 
-#### Domain Model Entities
+### Domain Entities
 
 \* denotes required fields.
 
-##### TicketStatus : Enum { Open, In Progress, On Hold, Close }
+#### TicketStatus : Enum { Open, In Progress, On Hold, Close }
 
 ##### Organization : FullAuditedAggregateRoot\<Guid>
 |   | Property         | Type                        | Min  | Max  | Examples                         |
@@ -32,17 +32,17 @@
 |   | Fax              | string?                     |      | 15   |                                  |
 |   | Notes            | string?                     |      | 1024 |                                  |
 
-##### AppUser : FullAuditedAggregateRoot\<Guid>
+#### AppUser : FullAuditedAggregateRoot\<Guid>
 |   | Property         | Type                        | Min  | Max  | Examples                         |
 |---|------------------|-----------------------------|-----:|-----:|----------------------------------|
 | * | Organizations    | ICollection\<Organization>  |      |      |                                  |
 
-##### Tag : FullAuditedAggregateRoot\<Guid>
+#### Tag : FullAuditedAggregateRoot\<Guid>
 |   | Property         | Type                        | Min  | Max  | Examples                         |
 |---|------------------|-----------------------------|-----:|-----:|----------------------------------|
 | * | Text             | string                      |      | 50   |                                  |
 
-##### Ticket : FullAuditedAggregateRoot\<Guid>
+#### Ticket : FullAuditedAggregateRoot\<Guid>
 |   | Property         | Type                        | Min  | Max  | Examples                         |
 |---|------------------|-----------------------------|-----:|-----:|----------------------------------|
 | * | TicketNumber     | int                         |      |      | Sequencial Number                |
@@ -62,7 +62,7 @@
 |   | AcceptedAnswerId | Guid?                       |      |      | Navigation Property              |
 |   | LastAnswerId     | Guid?                       |      |      | Navigation Property              |
 
-##### Answer : FullAuditedAggregateRoot\<Guid>
+#### Answer : FullAuditedAggregateRoot\<Guid>
 |   | Property         | Type                        | Min  | Max  | Examples                         |
 |---|------------------|-----------------------------|-----:|-----:|----------------------------------|
 | * | TicketId         | Guid                        |      |      | Navigation Property              |
@@ -73,7 +73,7 @@
 |   | AnswerReplies    | ICollection\<Reply>         |      |      |                                  |
 | * | AnswerReplyCount | int                         |      |      |                                  |
 
-##### AnswerReply : FullAuditedAggregateRoot\<Guid>
+#### AnswerReply : FullAuditedAggregateRoot\<Guid>
 |   | Property         | Type                        | Min  | Max  | Examples                         |
 |---|------------------|-----------------------------|-----:|-----:|----------------------------------|
 | * | AnswerId         | Guid                        |      |      | Navigation Property              |

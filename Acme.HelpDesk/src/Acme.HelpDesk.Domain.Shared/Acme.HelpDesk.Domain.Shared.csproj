@@ -1,0 +1,30 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <Import Project="..\..\common.props" />
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <RootNamespace>Acme.HelpDesk</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Volo.Abp.Identity.Domain.Shared" Version="2.7.0" />
+    <PackageReference Include="Volo.Abp.IdentityServer.Domain.Shared" Version="2.7.0" />
+    <PackageReference Include="Volo.Abp.BackgroundJobs.Domain.Shared" Version="2.7.0" />
+    <PackageReference Include="Volo.Abp.AuditLogging.Domain.Shared" Version="2.7.0" />
+    <PackageReference Include="Volo.Abp.FeatureManagement.Domain.Shared" Version="2.7.0" />
+    <PackageReference Include="Volo.Abp.PermissionManagement.Domain.Shared" Version="2.7.0" />
+    <PackageReference Include="Volo.Abp.SettingManagement.Domain.Shared" Version="2.7.0" />
+    <PackageReference Include="Volo.Abp.LanguageManagement.Domain.Shared" Version="2.7.0" />
+    <PackageReference Include="Volo.Saas.Domain.Shared" Version="2.7.0" />
+    <PackageReference Include="Volo.Abp.TextTemplateManagement.Domain.Shared" Version="2.7.0" />
+    <PackageReference Include="Volo.Abp.LeptonTheme.Management.Domain.Shared" Version="2.7.0" />
+    <PackageReference Include="Volo.Abp.Commercial.SuiteTemplates" Version="2.7.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Localization\HelpDesk\*.json" />
+    <Content Remove="Localization\HelpDesk\*.json" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,60 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <Import Project="..\..\common.props" />
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <AspNetCoreHostingModel>InProcess</AspNetCoreHostingModel>
+    <RootNamespace>Acme.HelpDesk.Web</RootNamespace>
+    <AssetTargetFallback>$(AssetTargetFallback);portable-net45+win8+wp8+wpa81;</AssetTargetFallback>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <GenerateBindingRedirectsOutputType>true</GenerateBindingRedirectsOutputType>
+    <GenerateRuntimeConfigurationFiles>true</GenerateRuntimeConfigurationFiles>
+    <PreserveCompilationContext>true</PreserveCompilationContext>
+    <MvcRazorExcludeRefAssembliesFromPublish>false</MvcRazorExcludeRefAssembliesFromPublish>
+    <PreserveCompilationReferences>true</PreserveCompilationReferences>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Logs\**" />
+    <Content Remove="Logs\**" />
+    <EmbeddedResource Remove="Logs\**" />
+    <None Remove="Logs\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Pages\**\*.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Pages\**\*.css">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Serilog.Extensions.Hosting" Version="3.0.0" />
+    <PackageReference Include="Serilog.Sinks.File" Version="4.0.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="5.0.0" />
+    <PackageReference Include="IdentityServer4.AccessTokenValidation" Version="3.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Acme.HelpDesk.Application\Acme.HelpDesk.Application.csproj" />
+    <ProjectReference Include="..\Acme.HelpDesk.HttpApi\Acme.HelpDesk.HttpApi.csproj" />
+    <ProjectReference Include="..\Acme.HelpDesk.EntityFrameworkCore.DbMigrations\Acme.HelpDesk.EntityFrameworkCore.DbMigrations.csproj" />
+    <PackageReference Include="Volo.Abp.Autofac" Version="2.7.0" />
+    <PackageReference Include="Volo.Abp.AspNetCore.Authentication.JwtBearer" Version="2.7.0" />
+    <PackageReference Include="Volo.Abp.FeatureManagement.Web" Version="2.7.0" />
+    <PackageReference Include="Volo.Abp.Account.Pro.Public.Web.IdentityServer" Version="2.7.0" />
+    <PackageReference Include="Volo.Abp.Account.Pro.Admin.Web" Version="2.7.0" />
+    <PackageReference Include="Volo.Abp.AuditLogging.Web" Version="2.7.0" />
+    <PackageReference Include="Volo.Abp.Identity.Pro.Web" Version="2.7.0" />
+    <PackageReference Include="Volo.Abp.LeptonTheme.Management.Web" Version="2.7.0" />
+    <PackageReference Include="Volo.Abp.IdentityServer.Web" Version="2.7.0" />
+    <PackageReference Include="Volo.Abp.LanguageManagement.Web" Version="2.7.0" />
+    <PackageReference Include="Volo.Saas.Host.Web" Version="2.7.0" />
+    <PackageReference Include="Volo.Abp.AspNetCore.Mvc.UI.Theme.Lepton" Version="2.7.0" />
+    <PackageReference Include="Volo.Abp.TextTemplateManagement.Web" Version="2.7.0" />
+  </ItemGroup>
+
+</Project>
