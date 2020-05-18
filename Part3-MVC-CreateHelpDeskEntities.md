@@ -11,3 +11,16 @@
 
 In this tutorial we will demonstrate how to build the Help Desk entities.
 ### Create TicketStatus 
+
+### Create Oranization
+
+### Extend AppUser
+
+### Create AnswerReply
+
+### Create Answer
+
+### Create Tag
+
+### Create Ticket
+
