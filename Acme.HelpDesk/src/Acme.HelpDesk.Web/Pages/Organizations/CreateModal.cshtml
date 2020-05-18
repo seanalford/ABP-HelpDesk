@@ -1,0 +1,39 @@
+@page
+@inherits Acme.HelpDesk.Web.Pages.HelpDeskPage
+@using Volo.Abp.AspNetCore.Mvc.UI.Bootstrap.TagHelpers.Modal
+@using Acme.HelpDesk.Organizations;
+@using System.Globalization
+@model  Acme.HelpDesk.Web.Pages.Organizations.CreateModalModel
+@{
+    Layout = null;
+}
+<form data-ajaxForm="true" asp-page="/Organizations/CreateModal" autocomplete="off">
+    <abp-modal>
+        <abp-modal-header title="@L["NewOrganization"].Value"></abp-modal-header>
+
+        <abp-modal-body>
+            
+            <abp-input asp-for="Organization.Name"/>
+
+            <abp-input asp-for="Organization.Number"/>
+
+            <abp-input asp-for="Organization.Street"/>
+
+            <abp-input asp-for="Organization.City"/>
+
+            <abp-input asp-for="Organization.State"/>
+
+            <abp-input asp-for="Organization.Zipcode"/>
+
+            <abp-input asp-for="Organization.Phone"/>
+
+            <abp-input asp-for="Organization.Fax"/>
+
+            <abp-input asp-for="Organization.Notes"/>
+
+            
+        </abp-modal-body>
+
+        <abp-modal-footer buttons="@(AbpModalButtons.Cancel|AbpModalButtons.Save)"></abp-modal-footer>
+    </abp-modal>
+</form>

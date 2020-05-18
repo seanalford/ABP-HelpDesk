@@ -1,4 +1,4 @@
-# [ABP Suite](https://commercial.abp.io/tools/suite) - Help Desk Tutorial - Part 3
+# Acme Help Desk Tutorial - Part 3
 
 ### About this tutorial:
 
@@ -9,7 +9,7 @@
 
 ### Overview
 
-In this tutorial we will demonstrate how to build the Help Desk entities.
+In this tutorial we will demonstrate how to build the Help Desk entities outlined in [Part-1: - Help Desk Domain Model](Part1-HelpDeskDomainModel.md) .
 ### Create TicketStatus
 
 In the `Acme.HelpDesk.Domain.Shared` project, create a new folder named `TicketStatus`.
@@ -31,6 +31,20 @@ namespace Acme.HelpDesk.TicketStatus
 ``` 
 
 ### Create Oranization
+
+In ABP Suite click `CRUD Page Generator` and fill in the `Entity info` tab as follows.
+
+![CreateOrganizationEntityInfo](CreateOrganizationEntityInfo.jpg)
+
+Next, fill in the `Properties` tab as follows.
+
+![CreateOrganizationProperties](CreateOrganizationProperties.jpg)
+
+Next, click `Save and generate`.
+
+Next, deploy the Organization migration using the DBMigrator.
+
+Finally, run the Helpd Desk web application and explore the Organization.
 
 ### Extend AppUser
 

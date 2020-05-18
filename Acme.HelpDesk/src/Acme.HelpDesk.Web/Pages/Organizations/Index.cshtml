@@ -1,0 +1,99 @@
+@page
+@using Microsoft.AspNetCore.Authorization
+@using Volo.Abp.AspNetCore.Mvc.UI.Layout
+@using Acme.HelpDesk.Permissions
+@using Acme.HelpDesk.Web.Pages.Organizations
+@using Acme.HelpDesk.Web.Menus
+@inherits Acme.HelpDesk.Web.Pages.HelpDeskPage
+@inject IAuthorizationService Authorization
+@model IndexModel
+@inject IPageLayout PageLayout
+@{
+    PageLayout.Content.Title = L["Organizations"].Value;
+    PageLayout.Content.MenuItemName = HelpDeskMenus.Organizations;
+}
+
+@section scripts
+{
+    <abp-script src="/Pages/Organizations/index.js" />
+}
+
+@section content_toolbar {
+    @if (await Authorization.IsGrantedAsync(HelpDeskPermissions.Organizations.Create))
+    {
+        <abp-button id="NewOrganizationButton"
+                    text="@L["NewOrganization"].Value"
+                    icon="plus"
+                    button-type="Primary" />
+    }
+}
+
+<abp-card>
+    <abp-card-body>
+		<abp-row class="mb-3">
+            <abp-column size-md="_12">
+                <div class="input-group mb-3">
+                    <input type="search"
+                           id="FilterText"
+                           class="form-control"
+                           placeholder="@L["Search"]">
+
+                    <div class="input-group-append">
+                        <abp-button button-type="Outline_Secondary" icon="search" id="SearchButton"></abp-button>
+                    </div>
+                </div> 
+            </abp-column>
+            <abp-column size-md="_12">
+                <a href="javascript:;" id="AdvancedFilterSectionToggler">@L["SeeAdvancedFilters"]</a>
+            </abp-column>
+        </abp-row>
+        <abp-row id="AdvancedFilterSection" style="display: none;">
+                <abp-column size="_3">
+                    <abp-input asp-for="NameFilter" label="@L["Name"].Value" />
+                </abp-column>
+                <abp-column size="_3">
+                    <abp-input asp-for="NumberFilter" label="@L["Number"].Value" />
+                </abp-column>
+                <abp-column size="_3">
+                    <abp-input asp-for="StreetFilter" label="@L["Street"].Value" />
+                </abp-column>
+                <abp-column size="_3">
+                    <abp-input asp-for="CityFilter" label="@L["City"].Value" />
+                </abp-column>
+                <abp-column size="_3">
+                    <abp-input asp-for="StateFilter" label="@L["State"].Value" />
+                </abp-column>
+                <abp-column size="_3">
+                    <abp-input asp-for="ZipcodeFilter" label="@L["Zipcode"].Value" />
+                </abp-column>
+                <abp-column size="_3">
+                    <abp-input asp-for="PhoneFilter" label="@L["Phone"].Value" />
+                </abp-column>
+                <abp-column size="_3">
+                    <abp-input asp-for="FaxFilter" label="@L["Fax"].Value" />
+                </abp-column>
+                <abp-column size="_3">
+                    <abp-input asp-for="NotesFilter" label="@L["Notes"].Value" />
+                </abp-column>
+
+        </abp-row>
+        <abp-table striped-rows="true" id="OrganizationsTable">
+            <thead>
+				<tr>
+					<th>@L["Actions"]</th>
+					<th>@L["Name"]</th>
+					<th>@L["Number"]</th>
+					<th>@L["Street"]</th>
+					<th>@L["City"]</th>
+					<th>@L["State"]</th>
+					<th>@L["Zipcode"]</th>
+					<th>@L["Phone"]</th>
+					<th>@L["Fax"]</th>
+					<th>@L["Notes"]</th>
+
+
+				</tr>
+            </thead>
+        </abp-table>
+    </abp-card-body>
+</abp-card>

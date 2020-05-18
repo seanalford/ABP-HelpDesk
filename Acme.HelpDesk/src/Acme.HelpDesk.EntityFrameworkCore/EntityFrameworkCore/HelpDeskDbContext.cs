@@ -1,3 +1,4 @@
+using Acme.HelpDesk.Organizations;
 using Microsoft.EntityFrameworkCore;
 using Acme.HelpDesk.Users;
 using Volo.Abp.Data;
@@ -21,6 +22,7 @@ namespace Acme.HelpDesk.EntityFrameworkCore
     public class HelpDeskDbContext : AbpDbContext<HelpDeskDbContext>
     {
         public DbSet<AppUser> Users { get; set; }
+        public DbSet<Organization> Organizations { get; set; }
 
         /* Add DbSet properties for your Aggregate Roots / Entities here.
          * Also map them inside HelpDeskDbContextModelCreatingExtensions.ConfigureHelpDesk

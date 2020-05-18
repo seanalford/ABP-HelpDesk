@@ -93,6 +93,17 @@ namespace Acme.HelpDesk.Web.Menus
 
             //Administration->Settings
             administration.SetSubItemOrder(SettingManagementMenuNames.GroupName, 7);
+
+            if (await authorizationService.IsGrantedAsync(HelpDeskPermissions.Organizations.Default))
+            {
+                context.Menu.AddItem(
+                    new ApplicationMenuItem(
+                        "HelpDesk.Organizations",
+                        l["Menu:Organizations"],
+                        url: "/Organizations",
+                        icon: "fa fa-file-alt")
+                );
+            }
         }
     }
 }

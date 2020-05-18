@@ -13,5 +13,13 @@ namespace Acme.HelpDesk.Permissions
 
         //Add your own permission names. Example:
         //public const string MyPermission1 = GroupName + ".MyPermission1";
+
+        public class Organizations
+        {
+            public const string Default = GroupName + ".Organizations";
+            public const string Edit = Default + ".Edit";
+            public const string Create = Default + ".Create";
+            public const string Delete = Default + ".Delete";
+        }
     }
 }

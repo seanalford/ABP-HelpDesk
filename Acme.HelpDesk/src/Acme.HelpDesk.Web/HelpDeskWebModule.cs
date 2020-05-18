@@ -1,4 +1,4 @@
-﻿using System.IO;
+using System.IO;
 using Localization.Resources.AbpUi;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -96,6 +96,7 @@ namespace Acme.HelpDesk.Web
             {
                 options.Conventions.AuthorizePage("/HostDashboard", HelpDeskPermissions.Dashboard.Host);
                 options.Conventions.AuthorizePage("/TenantDashboard", HelpDeskPermissions.Dashboard.Tenant);
+                options.Conventions.AuthorizePage("/Organizations/Index", HelpDeskPermissions.Organizations.Default);
             });
         }
 

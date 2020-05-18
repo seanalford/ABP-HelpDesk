@@ -4,14 +4,16 @@ using Acme.HelpDesk.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace Acme.HelpDesk.Migrations
 {
     [DbContext(typeof(HelpDeskMigrationsDbContext))]
-    partial class HelpDeskMigrationsDbContextModelSnapshot : ModelSnapshot
+    [Migration("20200518164537_Added_Organization")]
+    partial class Added_Organization
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

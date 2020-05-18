@@ -16,6 +16,11 @@ namespace Acme.HelpDesk.Permissions
 
             //Define your own permissions here. Example:
             //myGroup.AddPermission(HelpDeskPermissions.MyPermission1, L("Permission:MyPermission1"));
+
+            var organizationPermission = myGroup.AddPermission(HelpDeskPermissions.Organizations.Default, L("Permission:Organizations"));
+            organizationPermission.AddChild(HelpDeskPermissions.Organizations.Create, L("Permission:Create"));
+            organizationPermission.AddChild(HelpDeskPermissions.Organizations.Edit, L("Permission:Edit"));
+            organizationPermission.AddChild(HelpDeskPermissions.Organizations.Delete, L("Permission:Delete"));
         }
 
         private static LocalizableString L(string name)
