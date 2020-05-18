@@ -39,6 +39,15 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Acme.HelpDesk.HttpApi.Clien
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Acme.HelpDesk.DbMigrator", "src\Acme.HelpDesk.DbMigrator\Acme.HelpDesk.DbMigrator.csproj", "{70680696-BB1E-4383-BCB2-42C3767171FB}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tutorial", "tutorial", "{44B303A0-E029-4D4D-BCE5-46678299BF24}"
+	ProjectSection(SolutionItems) = preProject
+		..\Part1-HelpDeskDomainModel.md = ..\Part1-HelpDeskDomainModel.md
+		..\Part2-MVC-CreateHelpDeskSoluton.md = ..\Part2-MVC-CreateHelpDeskSoluton.md
+		..\Part3-MVC-CreateHelpDeskEntities.md = ..\Part3-MVC-CreateHelpDeskEntities.md
+		..\Part4-MVC-CustomizeHelpDesk.md = ..\Part4-MVC-CustomizeHelpDesk.md
+		..\README.md = ..\README.md
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
