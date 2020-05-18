@@ -10,7 +10,25 @@
 ### Overview
 
 In this tutorial we will demonstrate how to build the Help Desk entities.
-### Create TicketStatus 
+### Create TicketStatus
+
+In the `Acme.HelpDesk.Domain.Shared` project, create a new folder named `TicketStatus`.
+Next, in the `TicketStatus` folder create a new class file named `TicketStatus.cs` containing the following code.
+
+#### TicketStatus.cs
+
+```c#
+namespace Acme.HelpDesk.TicketStatus
+{
+    public enum TicketStatus
+    {
+        New,
+        InProgress,
+        OnHold,
+        Closed,
+    }
+}
+``` 
 
 ### Create Oranization
 
