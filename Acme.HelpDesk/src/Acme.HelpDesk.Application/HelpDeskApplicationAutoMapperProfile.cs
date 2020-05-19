@@ -1,6 +1,5 @@
-using System;
-using Acme.HelpDesk.Shared;
 using Acme.HelpDesk.Organizations;
+using Acme.HelpDesk.Users;
 using AutoMapper;
 
 namespace Acme.HelpDesk
@@ -15,6 +14,7 @@ namespace Acme.HelpDesk
             CreateMap<OrganizationCreateDto, Organization>();
             CreateMap<Organization, OrganizationDto>();
             CreateMap<OrganizationUpdateDto, Organization>();
+            CreateMap<AppUser, AppUserDto>();
         }
     }
 }
