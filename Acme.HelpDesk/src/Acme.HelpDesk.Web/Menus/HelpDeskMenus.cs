@@ -11,5 +11,7 @@ namespace Acme.HelpDesk.Web.Menus
         public const string TenantDashboard = Prefix + ".TenantDashboard";
 
         public const string Organizations = Prefix + ".Organizations";
+
+        public const string Tags = Prefix + ".Tags";
     }
 }

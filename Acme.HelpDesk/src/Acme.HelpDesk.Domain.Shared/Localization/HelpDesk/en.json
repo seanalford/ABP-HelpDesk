@@ -31,6 +31,10 @@
     "Phone": "Phone",
     "Fax": "Fax",
     "Notes": "Notes",
-    "Menu:Organizations": "Organizations"
+    "Menu:Organizations": "Organizations",
+    "Permission:Tags": "Tags",
+    "Tags": "Tags",
+    "NewTag": "New Tag",
+    "Menu:Tags": "Tags"
   }
 }

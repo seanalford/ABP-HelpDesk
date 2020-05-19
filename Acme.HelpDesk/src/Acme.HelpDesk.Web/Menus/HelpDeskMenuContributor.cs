@@ -104,6 +104,17 @@ namespace Acme.HelpDesk.Web.Menus
                         icon: "fa fa-file-alt")
                 );
             }
+
+            if (await authorizationService.IsGrantedAsync(HelpDeskPermissions.Tags.Default))
+            {
+                context.Menu.AddItem(
+                    new ApplicationMenuItem(
+                        "HelpDesk.Tags",
+                        l["Menu:Tags"],
+                        url: "/Tags",
+                        icon: "fa fa-file-alt")
+                );
+            }
         }
     }
 }

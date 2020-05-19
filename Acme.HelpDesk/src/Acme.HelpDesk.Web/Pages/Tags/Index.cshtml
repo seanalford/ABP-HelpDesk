@@ -1,0 +1,67 @@
+@page
+@using Microsoft.AspNetCore.Authorization
+@using Volo.Abp.AspNetCore.Mvc.UI.Layout
+@using Acme.HelpDesk.Permissions
+@using Acme.HelpDesk.Web.Pages.Tags
+@using Acme.HelpDesk.Web.Menus
+@inherits Acme.HelpDesk.Web.Pages.HelpDeskPage
+@inject IAuthorizationService Authorization
+@model IndexModel
+@inject IPageLayout PageLayout
+@{
+    PageLayout.Content.Title = L["Tags"].Value;
+    PageLayout.Content.MenuItemName = HelpDeskMenus.Tags;
+}
+
+@section scripts
+{
+    <abp-script src="/Pages/Tags/index.js" />
+}
+
+@section content_toolbar {
+    @if (await Authorization.IsGrantedAsync(HelpDeskPermissions.Tags.Create))
+    {
+        <abp-button id="NewTagButton"
+                    text="@L["NewTag"].Value"
+                    icon="plus"
+                    button-type="Primary" />
+    }
+}
+
+<abp-card>
+    <abp-card-body>
+		<abp-row class="mb-3">
+            <abp-column size-md="_12">
+                <div class="input-group mb-3">
+                    <input type="search"
+                           id="FilterText"
+                           class="form-control"
+                           placeholder="@L["Search"]">
+
+                    <div class="input-group-append">
+                        <abp-button button-type="Outline_Secondary" icon="search" id="SearchButton"></abp-button>
+                    </div>
+                </div> 
+            </abp-column>
+            <abp-column size-md="_12">
+                <a href="javascript:;" id="AdvancedFilterSectionToggler">@L["SeeAdvancedFilters"]</a>
+            </abp-column>
+        </abp-row>
+        <abp-row id="AdvancedFilterSection" style="display: none;">
+                <abp-column size="_3">
+                    <abp-input asp-for="NameFilter" label="@L["Name"].Value" />
+                </abp-column>
+
+        </abp-row>
+        <abp-table striped-rows="true" id="TagsTable">
+            <thead>
+				<tr>
+					<th>@L["Actions"]</th>
+					<th>@L["Name"]</th>
+
+
+				</tr>
+            </thead>
+        </abp-table>
+    </abp-card-body>
+</abp-card>

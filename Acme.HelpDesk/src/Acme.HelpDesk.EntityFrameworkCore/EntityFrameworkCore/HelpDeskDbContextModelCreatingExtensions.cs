@@ -1,3 +1,4 @@
+using Acme.HelpDesk.Tags;
 using Volo.Abp.EntityFrameworkCore.Modeling;
 using Acme.HelpDesk.Organizations;
 using Microsoft.EntityFrameworkCore;
@@ -35,6 +36,16 @@ namespace Acme.HelpDesk.EntityFrameworkCore
                 b.Property(x => x.Phone).HasColumnName(nameof(Organization.Phone)).HasMaxLength(OrganizationConsts.PhoneMaxLength);
                 b.Property(x => x.Fax).HasColumnName(nameof(Organization.Fax)).HasMaxLength(OrganizationConsts.FaxMaxLength);
                 b.Property(x => x.Notes).HasColumnName(nameof(Organization.Notes)).HasMaxLength(OrganizationConsts.NotesMaxLength);
+
+            });
+
+            builder.Entity<Tag>(b =>
+            {
+                b.ToTable(HelpDeskConsts.DbTablePrefix + "Tags", HelpDeskConsts.DbSchema);
+                b.ConfigureByConvention();
+
+                b.Property(x => x.TenantId).HasColumnName(nameof(Tag.TenantId));
+                b.Property(x => x.Name).HasColumnName(nameof(Tag.Name)).IsRequired().HasMaxLength(TagConsts.NameMaxLength);
 
             });
         }

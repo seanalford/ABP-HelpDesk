@@ -21,6 +21,11 @@ namespace Acme.HelpDesk.Permissions
             organizationPermission.AddChild(HelpDeskPermissions.Organizations.Create, L("Permission:Create"));
             organizationPermission.AddChild(HelpDeskPermissions.Organizations.Edit, L("Permission:Edit"));
             organizationPermission.AddChild(HelpDeskPermissions.Organizations.Delete, L("Permission:Delete"));
+
+            var tagPermission = myGroup.AddPermission(HelpDeskPermissions.Tags.Default, L("Permission:Tags"));
+            tagPermission.AddChild(HelpDeskPermissions.Tags.Create, L("Permission:Create"));
+            tagPermission.AddChild(HelpDeskPermissions.Tags.Edit, L("Permission:Edit"));
+            tagPermission.AddChild(HelpDeskPermissions.Tags.Delete, L("Permission:Delete"));
         }
 
         private static LocalizableString L(string name)

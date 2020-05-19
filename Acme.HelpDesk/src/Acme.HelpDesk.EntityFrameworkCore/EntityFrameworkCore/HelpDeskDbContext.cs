@@ -1,3 +1,4 @@
+using Acme.HelpDesk.Tags;
 using Acme.HelpDesk.Organizations;
 using Acme.HelpDesk.Users;
 using Microsoft.EntityFrameworkCore;
@@ -23,6 +24,7 @@ namespace Acme.HelpDesk.EntityFrameworkCore
     {
         public DbSet<AppUser> Users { get; set; }
         public DbSet<Organization> Organizations { get; set; }
+        public DbSet<Tag> Tags { get; set; }
 
         /* Add DbSet properties for your Aggregate Roots / Entities here.
          * Also map them inside HelpDeskDbContextModelCreatingExtensions.ConfigureHelpDesk

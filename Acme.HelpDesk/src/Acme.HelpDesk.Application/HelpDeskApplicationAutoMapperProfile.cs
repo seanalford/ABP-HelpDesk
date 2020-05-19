@@ -1,3 +1,6 @@
+using System;
+using Acme.HelpDesk.Shared;
+using Acme.HelpDesk.Tags;
 using Acme.HelpDesk.Organizations;
 using Acme.HelpDesk.Users;
 using AutoMapper;
@@ -15,6 +18,9 @@ namespace Acme.HelpDesk
             CreateMap<Organization, OrganizationDto>();
             CreateMap<OrganizationUpdateDto, Organization>();
             CreateMap<AppUser, AppUserDto>();
+            CreateMap<TagCreateDto, Tag>();
+            CreateMap<Tag, TagDto>();
+            CreateMap<TagUpdateDto, Tag>();
         }
     }
 }

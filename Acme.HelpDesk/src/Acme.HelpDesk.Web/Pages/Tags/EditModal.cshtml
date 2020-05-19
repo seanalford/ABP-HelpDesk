@@ -1,0 +1,25 @@
+@page
+@inherits Acme.HelpDesk.Web.Pages.HelpDeskPage
+@using Acme.HelpDesk.Web.Pages.Tags
+@using Volo.Abp.AspNetCore.Mvc.UI.Bootstrap.TagHelpers.Modal
+@using Acme.HelpDesk.Tags;
+@using System.Globalization
+@model EditModalModel
+@{
+    Layout = null;
+}
+<form data-ajaxForm="true" asp-page="/Tags/EditModal" autocomplete="off">
+    <abp-modal>
+        <abp-modal-header title="@L["Update"].Value"></abp-modal-header>
+
+        <abp-modal-body>
+            <abp-input asp-for="Id" />
+            
+            <abp-input asp-for="Tag.Name"/>
+
+            
+        </abp-modal-body>
+
+        <abp-modal-footer buttons="@(AbpModalButtons.Cancel|AbpModalButtons.Save)"></abp-modal-footer>
+    </abp-modal>
+</form>

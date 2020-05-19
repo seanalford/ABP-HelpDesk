@@ -21,5 +21,13 @@ namespace Acme.HelpDesk.Permissions
             public const string Create = Default + ".Create";
             public const string Delete = Default + ".Delete";
         }
+
+        public class Tags
+        {
+            public const string Default = GroupName + ".Tags";
+            public const string Edit = Default + ".Edit";
+            public const string Create = Default + ".Create";
+            public const string Delete = Default + ".Delete";
+        }
     }
 }
