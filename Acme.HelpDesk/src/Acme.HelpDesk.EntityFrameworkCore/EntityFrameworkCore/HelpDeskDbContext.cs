@@ -1,6 +1,6 @@
 using Acme.HelpDesk.Organizations;
-using Microsoft.EntityFrameworkCore;
 using Acme.HelpDesk.Users;
+using Microsoft.EntityFrameworkCore;
 using Volo.Abp.Data;
 using Volo.Abp.EntityFrameworkCore;
 using Volo.Abp.EntityFrameworkCore.Modeling;
@@ -50,6 +50,7 @@ namespace Acme.HelpDesk.EntityFrameworkCore
                 /* Configure mappings for your additional properties.
                  * Also see the HelpDeskEfCoreEntityExtensionMappings class.
                  */
+                b.HasOne(x => x.Organization).WithMany().HasForeignKey(x => x.OrganizationId);
             });
 
             /* Configure your own tables/entities inside the ConfigureHelpDesk method */

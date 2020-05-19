@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Acme.HelpDesk.Organizations;
+using System;
 using Volo.Abp.Domain.Entities.Auditing;
 using Volo.Abp.Users;
 
@@ -56,9 +57,12 @@ namespace Acme.HelpDesk.Users
          * schema change to the database.
          */
 
+        public virtual Guid OrganizationId { get; set; }
+        public virtual Organization Organization { get; set; }
+
         private AppUser()
         {
-            
+
         }
     }
 }
