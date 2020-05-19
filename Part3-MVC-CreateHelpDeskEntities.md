@@ -15,10 +15,12 @@ In this tutorial we will demonstrate how to build the Help Desk entities outline
 In the `Acme.HelpDesk.Domain.Shared` project, create a new folder named `TicketStatus`.
 Next, in the `TicketStatus` folder create a new class file named `TicketStatus.cs` containing the following code.
 
+**NOTE**: Make sure the namespace is `Acme.HelpDesk` **NOT** `Acme.HelpDesk.TicketStatus`
+
 #### TicketStatus.cs
 
 ```c#
-namespace Acme.HelpDesk.TicketStatus
+namespace Acme.HelpDesk
 {
     public enum TicketStatus
     {
