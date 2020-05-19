@@ -48,11 +48,23 @@ Finally, run the Helpd Desk web application and explore the Organization.
 
 ### Extend AppUser
 
-### Create AnswerReply
+### Create Tag
+
+In the `ABP Suite CRUD Page Generator` and fill in the `Entity info` tab as follows.
+
+![CreateOrganizationEntityInfo](CreateTagEntityInfo.jpg)
+
+Next, fill in the `Properties` tab as follows.
+
+![CreateOrganizationProperties](CreateTagProperties.jpg)
+
+Next, click `Save and generate`.
+
+Next, deploy the Organization migration using the DBMigrator.
+
+Finally, run the Helpd Desk web application and explore the Organization.
 
 ### Create Answer
-
-### Create Tag
 
 ### Create Ticket
 
