@@ -64,7 +64,27 @@ Next, deploy the Organization migration using the DBMigrator.
 
 Finally, run the Helpd Desk web application and explore the Organization.
 
+### Create Ticket
+
+In the `ABP Suite CRUD Page Generator` and fill in the `Entity info` tab as follows.
+
+![CreateOrganizationEntityInfo](CreateTicketEntityInfo.jpg)
+
+Next, fill in the `Properties` tab as follows.
+
+![CreateOrganizationProperties](CreateTicketProperties.jpg)
+
+Next, fill in the `Navigation properties` tab as follows.
+
+![CreateOrganizationProperties](CreateTicketNavigationProperties.jpg)
+
+Next, click `Save and generate`.
+
+Next, deploy the Organization migration using the DBMigrator.
+
+Finally, run the Helpd Desk web application and explore the Organization.
+
+
 ### Create Answer
 
-### Create Ticket
 

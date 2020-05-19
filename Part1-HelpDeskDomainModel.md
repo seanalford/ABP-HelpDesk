@@ -46,16 +46,16 @@
 |   | Property         | Type                        | Min  | Max  | Examples                         |
 |---|------------------|-----------------------------|-----:|-----:|----------------------------------|
 | * | TicketNumber     | int                         |      |      | Sequencial Number                |
-| * | CreatedDate      | DateTine                    |      |      |                                  |
+| * | CreatedDate      | DateTime                    |      |      |                                  |
 | * | CreatorUserId    | Guid                        |      |      | Navigation Property              |
 |   | AssigneeUserId   | Guid?                       |      |      | Navigation Property              |
 | * | Status           | enum                        |      |      | Open                             |
 | * | Title            | string                      |      | 250  |                                  |
 | * | Text             | string                      |      | 1024 |                                  |
 | * | Tags             | ICollection\<Tag>           |      |      |                                  |
-|   | CloserDate       | DateTine?                   |      |      |                                  |
+|   | CloserDate       | DateTime?                   |      |      |                                  |
 |   | CloserUserId     | Guid?                       |      |      | Navigation Property              |
-|   | ReopenDate       | DateTine?                   |      |      |                                  |
+|   | ReopenDate       | DateTime?                   |      |      |                                  |
 |   | ReopendUserId    | Guid?                       |      |      | Navigation Property              |
 |   | Answers          | ICollection\<Answer>        |      |      |                                  |
 | * | AnswerCount      | int                         |      |      |                                  |
@@ -66,7 +66,7 @@
 |   | Property         | Type                        | Min  | Max  | Examples                         |
 |---|------------------|-----------------------------|-----:|-----:|----------------------------------|
 | * | TicketId         | Guid                        |      |      | Navigation Property              |
-| * | CreatedDate      | DateTine                    |      |      |                                  |
+| * | CreatedDate      | DateTime                    |      |      |                                  |
 | * | CreatorUserId    | Guid                        |      |      | Navigation Property              |
 | * | Text             | string                      |      |      | Navigation Property              |
 | * | Votes            | int                         |      |      |                                  |
@@ -77,7 +77,7 @@
 |   | Property         | Type                        | Min  | Max  | Examples                         |
 |---|------------------|-----------------------------|-----:|-----:|----------------------------------|
 | * | AnswerId         | Guid                        |      |      | Navigation Property              |
-| * | CreatedDate      | DateTine                    |      |      |                                  |
+| * | CreatedDate      | DateTime                    |      |      |                                  |
 | * | CreatorUserId    | Guid                        |      |      | Navigation Property              |
 | * | Text             | string                      |      |      | Navigation Property              |
 | * | Votes            | int                         |      |      |                                  |
