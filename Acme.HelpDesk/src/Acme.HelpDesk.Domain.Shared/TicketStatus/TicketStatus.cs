@@ -1,4 +1,4 @@
-﻿namespace Acme.HelpDesk.TicketStatus
+﻿namespace Acme.HelpDesk
 {
     public enum TicketStatus
     {
