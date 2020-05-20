@@ -3,6 +3,7 @@
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UserSecretsId>a36549f4-a2d3-488f-ab4e-f421e89120d4</UserSecretsId>
   </PropertyGroup>
 
   <ItemGroup>
@@ -14,6 +15,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.Configuration.UserSecrets" Version="3.1.4" />
     <PackageReference Include="Volo.Abp.Http.Client.IdentityModel" Version="2.7.0" />
     <ProjectReference Include="..\..\src\Acme.HelpDesk.HttpApi.Client\Acme.HelpDesk.HttpApi.Client.csproj" />
   </ItemGroup>

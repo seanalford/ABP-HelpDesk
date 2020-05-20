@@ -5,6 +5,7 @@
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
     <RootNamespace>Acme.HelpDesk</RootNamespace>
+    <UserSecretsId>e60815f8-0d84-44dc-8ec7-e748f2a1906d</UserSecretsId>
   </PropertyGroup>
 
   <ItemGroup>
@@ -20,6 +21,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.Configuration.UserSecrets" Version="3.1.4" />
     <PackageReference Include="Volo.Abp.TestBase" Version="2.7.0" />
     <PackageReference Include="Volo.Abp.Autofac" Version="2.7.0" />
     <PackageReference Include="Volo.Abp.Authorization" Version="2.7.0" />
