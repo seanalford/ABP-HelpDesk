@@ -13,7 +13,7 @@ In this tutorial we will demonstrate how to build the Help Desk entities outline
 
 ### Create TicketStatus
 <details>
-    <summary>Click to expand!</summary>    
+    <summary>###Click to expand!</summary>    
 In the `Acme.HelpDesk.Domain.Shared` project, create a new folder named `TicketStatus`.
 Next, in the `TicketStatus` folder create a new class file named `TicketStatus.cs` containing the following code.
 
