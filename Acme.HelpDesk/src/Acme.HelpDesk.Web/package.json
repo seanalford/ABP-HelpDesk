@@ -4,6 +4,6 @@
   "private": true,
   "dependencies": {
     "@abp/chart.js": "^2.6.2",
-    "@volo/abp.aspnetcore.mvc.ui.theme.lepton": "^2.6.2"
+    "@volo/abp.aspnetcore.mvc.ui.theme.lepton": "^7.0.0"
   }
 }
